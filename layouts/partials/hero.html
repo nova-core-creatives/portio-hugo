@@ -40,8 +40,10 @@
           <div class="figure-svg">
             <img src="images/hero/figure-svg.svg" alt="figure-svg" />
           </div>
-          <img class = "hero-image" src="{{ .image | absURL }}" alt="hero-image" style= "width:900px; height: 700px; object-fit:  contain;" />
-
+          <div class="d-flex justify-content-around">
+          <img class="d-none d-lg-block" src="{{ .image | absURL }}" alt="hero-image" style= "width: 700px; height: 500px; object-fit: contain;" />
+          </div>
+          <img class="d-lg-none d-xl-none" src="{{ .image | absURL }}" alt="hero-image" style= "object-fit: contain;" />
           {{ if .videoURL }}
           <div class="hero_figure-popup">
             <div class="thumb">
