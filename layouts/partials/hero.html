@@ -35,12 +35,12 @@
             href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6" style = "text-align: center;">
         <div class="hero_figure">
           <div class="figure-svg">
             <img src="images/hero/figure-svg.svg" alt="figure-svg" />
           </div>
-          <img class = "hero-image" src="{{ .image | absURL }}" alt="hero-image" style= "width:900px; height: 700px; object-fit:  contain;" />
+          <img class = "hero-image" src="{{ .image | absURL }}" alt="hero-image" style= "width:650px; height:100%; align-items: center; object-fit: contain;" />
 
           {{ if .videoURL }}
           <div class="hero_figure-popup">
