@@ -113,12 +113,23 @@
           <h3>Contact Form</h3>
         </div>
         <div class="contact-form-input">
-          <form id="contact-form" action="{{ .Site.Params.formspreeURL }}" method="POST">
+          <form
+          id="contact"
+          method="POST"
+          netlify-honeypot="subject"
+          data-netlify-recaptcha="true"
+          data-netlify="true"
+          >
 
             <div class="form-row">
 
               <div class="form-group col-md-6 pr-3">
                 <input type="text" class="form-control" name="Name" placeholder="Name" required />
+                <p style="display: none;">
+                  <label>
+                    Subject <input name="subject" type="text" class="form-control"/>
+                  </label>
+                </p>
               </div>
               <div class="form-group col-md-6">
                 <input type="email" class="form-control" name="email" placeholder="Email" required />
@@ -127,6 +138,7 @@
 
             <div class="form-group">
               <textarea class="form-control" id="message" rows="6" name="message" placeholder="Message"></textarea>
+              <div data-netlify-recaptcha="true"></div>
             </div>
 
             <div class="form-group">
@@ -179,9 +191,16 @@
         </div>
       </div>
       <div class="col-lg-6">
-        {{ $map := .Site.Params.map }}
+      <!--  {{ $map := .Site.Params.map }}
         <div id="map" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }}>
         </div>
+      -->
+      <div class="d-flex justify-content-around">
+      <img class="d-none d-lg-block" src="{{ "images/contact/contact.png" | absURL }}"  style= "width: 700px; height: 500px; object-fit: contain;" />
+      </div>
+      <div stlye= "text-align:center;">
+      <img class="d-lg-none d-xl-none" src="{{ "images/contact/contact.png" | absURL }}"  style= "; width: 500px; height: 500px; object-fit: contain;" />
+      </div>
       </div>
     </div>
   </div>
