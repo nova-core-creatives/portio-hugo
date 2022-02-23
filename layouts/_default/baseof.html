@@ -9,5 +9,9 @@
   </div>
   {{ partial "footer.html" . }}
 </body>
-
+<script>
+  function onSubmit(token) {
+    document.getElementById("contact-form").submit();
+  }
+</script>
 </html>

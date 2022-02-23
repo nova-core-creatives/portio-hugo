@@ -150,7 +150,15 @@
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-zoom" id="contact-form-button">Send Message</button>
+            <button
+            class="g-recaptcha"
+            data-sitekey="v3_site_key"
+            data-callback='onSubmit'
+            data-action='submit'
+            type="submit"
+            class="btn btn-primary btn-zoom"
+            id="contact-form-button">Send Message
+          </button>
             <p id="contact-form-status" class="mt-3"></p>
           </form>
 
