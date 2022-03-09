@@ -160,15 +160,6 @@ $(document).ready(function () {
   });
 
   // Modal Popup
-  $(".popup-button").magnificPopup({
-    disableOn: 700,
-    type: "iframe",
-    mainClass: "mfp-fade",
-    removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false,
-  });
 
   var portfolioGrid = $(".portfolio-item-grid").masonry({
     itemSelector: ".portfolio-item",
