@@ -866,7 +866,7 @@ $(function () {
       $(templateHTML).appendTo(document.body)
 
       $('#ss-target').bootstrapScrollspy({
-        target: '<img src=1 onerror=\'alert(0)\'>'
+        target: '<img loading="lazy" src=1 onerror=\'alert(0)\'>'
       })
     }, /SyntaxError/)
   })

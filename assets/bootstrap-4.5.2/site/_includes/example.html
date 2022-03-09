@@ -37,7 +37,7 @@
       {%- for content_chunk in modified_content -%}
         {%- if content_chunk contains '<svg class="bd-placeholder-img' -%}
           {%- capture img_placeholder -%}
-            <img src="..." {% if image_class %}class="{{ image_class }}" {% endif %}alt="...">
+            <img loading="lazy" src="..." {% if image_class %}class="{{ image_class }}" {% endif %}alt="...">
           {%- endcapture -%}
           {{- img_placeholder -}}
         {%- else -%}
