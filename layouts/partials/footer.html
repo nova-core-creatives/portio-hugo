@@ -36,7 +36,7 @@
 		<div class="row footer__widget">
 			<div class="col-lg-4">
 				<div class="footer__widget_logo mb-5">
-					<img src="{{ .Site.Params.footerLogo | absURL }}" alt="widget-logo">
+					<img loading="lazy" src="{{ .Site.Params.footerLogo | absURL }}" alt="widget-logo">
 				</div>
 			</div>
 			<div class="col-lg-4">
@@ -89,11 +89,18 @@
 </section>
 <script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.map.APIkey }}&libraries=geometry"></script>
 <script src="{{ "plugins/jQuery/jquery.min.js" | absURL }}"></script>
+<!--
 <script src="{{ "plugins/bootstrap/bootstrap.min.js" | absURL }}"></script>
+-->
+<script src="https://cdn.usebootstrap.com/bootstrap/4.1.1/js/bootstrap.min.js>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--
 <script src="{{ "plugins/slick/slick.min.js" | absURL }}"></script>
-<script src="{{ "plugins/waypoint/jquery.waypoints.min.js" | absURL }}"></script>
-<script src="{{ "plugins/magnafic-popup/jquery.magnific-popup.min.js" | absURL }}"></script>
 <script src="{{ "plugins/tweenmax/TweenMax.min.js" | absURL }}"></script>
+-->
+<script src="{{ "plugins/waypoint/jquery.waypoints.min.js" | absURL }}"></script>
+
+<script src="https://unpkg.com/gsap@1.20.3/TweenMax.js"></script>
 <script src="{{ "plugins/imagesloaded/imagesloaded.min.js" | absURL }}"></script>
 <script src="{{ "plugins/masonry/masonry.min.js" | absURL }}"></script>
 {{ $formhandler := resources.Get "js/form-handler.js" | minify }}
