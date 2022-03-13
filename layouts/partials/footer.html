@@ -78,7 +78,7 @@
 						{{ $social := .Site.Params.social }}
 						{{ range $social }}
 						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" href="{{ .url }}">
-							<i class="fa-brands  {{ .icon }}"></i></a>
+							<i class="fa-brands {{ .icon }}"></i></a>
 						</li>
 						{{ end }}
 					</ul>
