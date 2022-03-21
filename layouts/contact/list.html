@@ -115,7 +115,7 @@
         <div class="contact-form-input">
           <form
           id="contact-form"
-
+          onsubmit="getURL()"
           method="POST"
           netlify-honeypot="subject"
           data-netlify-recaptcha="true"
@@ -133,7 +133,7 @@
                 </p>
                 <p style="display: none;">
                   <label>
-                    Referrer <textarea name="link" class="textarea" placeholder="page-link"><script>window.location.href</script></textarea>
+                    Referrer <textarea id="form-ref-link"name="link" class="textarea" placeholder="page-link"></textarea>
                   </label>
                 </p>
               </div>
